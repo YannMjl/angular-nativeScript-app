@@ -4,7 +4,7 @@
     <CategoricalAxis tkCartesianHorizontalAxis></CategoricalAxis>
     <LinearAxis tkCartesianVerticalAxis></LinearAxis>
 
-    <BarSeries tkCartesianSeries [items]="reportByNames" categoryProperty="reportByNames.date | date : 'MMMM d, y'" valueProperty="reportByNames.size | fileSize"></BarSeries>
+    <BarSeries tkCartesianSeries [items]="reportByNames" categoryProperty="reportByNames..item.date | date : 'MMMM d, y'" valueProperty="reportByNames.item.size | fileSize"></BarSeries>
 </RadCartesianChart>
 
 

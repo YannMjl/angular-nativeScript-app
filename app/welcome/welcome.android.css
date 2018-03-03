@@ -1,0 +1,18 @@
+
+.main-container {
+  height: 380;
+  width: 295;
+}
+.initial-label {
+  font-size: 32;
+  letter-spacing: 0.35;
+}
+.main-label {
+  font-size: 28;
+  margin-top: 32;
+  margin-bottom: 32;
+  letter-spacing: 0.3;
+}
+.logo-container Image {
+  top: 150;
+}

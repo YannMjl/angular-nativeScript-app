@@ -23,7 +23,7 @@
             <ActivityIndicator [busy]="isAuthenticating" rowSpan="2"></ActivityIndicator>
         </GridLayout>
 
-        <Button [text]="isLoggingIn ? 'Login' : 'Sign up'" [isEnabled]="!isAuthenticating" class="submit-button" (tap)="submit()" [nsRouterLink]="['/items']"></Button>
+        <Button [text]="isLoggingIn ? 'Login' : 'Sign up'" [isEnabled]="!isAuthenticating" class="submit-button" (tap)="submit()" [nsRouterLink]="['/welcome']"></Button>
 
         <Label class="forgot-password-label" text="Forgot password?" (tap)="forgotPassword()" [opacity]="isLoggingIn ? 1 : 0"></Label>
 

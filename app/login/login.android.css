@@ -1,6 +1,7 @@
+
 .main-container {
-  height: 360;
-  width: 275;
+  height: 380;
+  width: 320;
 }
 .initial-label {
   font-size: 32;
@@ -28,5 +29,5 @@ TextField {
   text-transform: uppercase;
 }
 .logo-container Image {
-  top: 90;
+  top: 150;
 }

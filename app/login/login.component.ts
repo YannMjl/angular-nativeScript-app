@@ -14,7 +14,7 @@ import { alert, LoginService, User } from "../shared";
     selector: "ns-login",
     moduleId: module.id,
     templateUrl: "./login.component.html",
-    styleUrls: ["./login-common.css", "./login.component.css"],
+    styleUrls: ["./login-common.css", "./login.css"],
 })
 export class LoginComponent implements OnInit {
     user: User;
