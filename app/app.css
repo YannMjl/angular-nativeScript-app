@@ -10,13 +10,12 @@ of writing your own CSS rules. For a full list of class names in the theme
 refer to http://docs.nativescript.org/ui/theme.
 @import '~nativescript-theme-core/css/core.light.css';
 */
-
+/********************************************************************************************/
 /* import css style from other platforms (ios and android)                                  */
 /********************************************************************************************/
 @import url("./platform.css");
 
 /********************************************************************************************/
-
 /* css the first page for login and signup entries on the page                              */
 /********************************************************************************************/
 Page {

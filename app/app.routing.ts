@@ -1,12 +1,14 @@
-import { NgModule } from "@angular/core";
-import { NativeScriptRouterModule } from "nativescript-angular/router";
+// import route modules
 import { Routes } from "@angular/router";
+import { NativeScriptRouterModule } from "nativescript-angular/router";
 
-import { ItemsComponent } from "./item/items.component";
-import { ItemDetailComponent } from "./detail/item-detail.component";
+// import app components 
 import { LoginComponent } from "./login/login.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
-import { ItemByDateComponent } from "./detail-date/item-detail-date.component";
+import { DisplayDateComponent } from "./display-dates-in-report/date.component";
+import { DateReportComponent } from "./display-report-by-date/date-report.component";
+import { DisplayOrganizationComponent } from "./display-organizations-in-report/organization.component";
+import { OrganizationReportComponent } from "./display-report-by-organization/organization-report.component";
 
 import { AuthGuard } from "./auth-guard.service";
 
@@ -15,13 +17,13 @@ export const authProviders = [
 ];
 
 export const routes = [
-    { path: "", redirectTo: "/login", pathMatch: "full" },
+    { path: "", redirectTo: "/welcome", pathMatch: "full" },
     { path: "login", component: LoginComponent },
     { path: "welcome", component: WelcomeComponent },
-    { path: "items", component: ItemsComponent },
-    { path: "dates", component: ItemByDateComponent },
-    { path: "item/:id", component: ItemDetailComponent },
-    
+    { path: "organization-list", component: DisplayOrganizationComponent  },
+    { path: "dates-in-report", component: DisplayDateComponent },
+    { path: "org-report/:id", component: OrganizationReportComponent },
+    { path: "date-report/:id", component: DateReportComponent }
 ];
 
 /*@NgModule({

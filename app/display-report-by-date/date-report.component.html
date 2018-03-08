@@ -1,0 +1,8 @@
+<!-- >> chart-angular-bar-series -->
+<RadCartesianChart tkExampleTitle tkToggleNavButton>
+    <CategoricalAxis tkCartesianVerticalAxis labelTextColor="#cb4b16" labelSize="10" lineThickness="3" lineColor="Red"></CategoricalAxis>
+    <LinearAxis tkCartesianHorizontalAxis labelTextColor="Green"></LinearAxis>
+
+    <BarSeries tkCartesianSeries [items]="reports" categoryProperty="report.organization" valueProperty="report.size | fileSize"></BarSeries>
+</RadCartesianChart>
+<!-- << chart-angular-bar-series -->

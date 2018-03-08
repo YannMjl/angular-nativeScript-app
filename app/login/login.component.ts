@@ -11,7 +11,7 @@ import { TextField } from "ui/text-field";
 import { alert, LoginService, User } from "../shared";
 
 @Component({
-    selector: "ns-login",
+    selector: "login",
     moduleId: module.id,
     templateUrl: "./login.component.html",
     styleUrls: ["./login-common.css", "./login.css"],

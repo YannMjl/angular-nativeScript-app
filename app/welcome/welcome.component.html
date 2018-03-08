@@ -5,13 +5,13 @@
     <StackLayout #initialContainer class="initial-container">
         <Image src="res://logo_login" stretch="none" class="initial-logo"></Image>
         <Label text="CloudRepo" class="initial-label"></Label>
-        <StackLayout class="initial-button" [nsRouterLink]="['/items']">
+        <StackLayout class="initial-button" [nsRouterLink]="['/organization-list']">
             <Label text="Wiew Report By Organization" class="initial-button-label"></Label>
         </StackLayout>
-        <StackLayout class="viewBydate" [nsRouterLink]="['/dates']">
+        <StackLayout class="viewBydate" [nsRouterLink]="['/dates-in-report']">
             <Label text="View report By Date" class="initial-button-label"></Label>
         </StackLayout>
-        <StackLayout class="uploadReport" [nsRouterLink]="">
+        <StackLayout class="uploadReport">
             <Label text="Upload a Report" class="initial-button-label"></Label>
         </StackLayout>
 

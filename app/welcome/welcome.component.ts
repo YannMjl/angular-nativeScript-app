@@ -4,7 +4,7 @@ import { View } from "ui/core/view";
 import { Page } from "ui/page";
 
 @Component({
-    selector: "ns-welcome",
+    selector: "welcome",
     moduleId: module.id,
     templateUrl: "./welcome.component.html",
     styleUrls: ["./welcome-common.css", "./welcome.css"],
