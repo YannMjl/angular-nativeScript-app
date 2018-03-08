@@ -1,6 +1,5 @@
-import { Component, OnInit } from "@angular/core";
-
 import { Report } from "../shared/report";
+import { Component, OnInit } from "@angular/core";
 import { ReportService } from "../shared/report.service";
 
 @Component({
@@ -10,6 +9,7 @@ import { ReportService } from "../shared/report.service";
     styleUrls: ['organization-common.css']
 })
 export class DisplayOrganizationComponent implements OnInit {
+
     items: Report[];
 
     constructor(private reportService: ReportService) { }
@@ -21,9 +21,8 @@ export class DisplayOrganizationComponent implements OnInit {
     }
 
     getReports(): void {
-        console.log('in report');
         this.reportService
             .getReports()
-            .subscribe(reports => (this.items = reports));
+            .subscribe(report => (this.items = report));
     }
 }

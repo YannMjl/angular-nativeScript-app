@@ -1,10 +1,8 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
-import { ActivatedRoute, Params } from "@angular/router";
-
 import { Report } from "../shared/report";
+import { ActivatedRoute, Params } from "@angular/router";
 import { ReportService } from "../shared/report.service";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array/observable-array";
-
 
 @Component({
     selector: "date-report",
@@ -14,8 +12,8 @@ import { ObservableArray } from "tns-core-modules/data/observable-array/observab
 })
 export class DateReportComponent implements OnInit {
 
-    private report: ObservableArray<Report>;
-    reports: Report[];
+    private items: ObservableArray<Report>;
+    _items: Report[];
     date: Date;
 
     constructor(
@@ -25,11 +23,15 @@ export class DateReportComponent implements OnInit {
 
     ngOnInit(): void {
 
+        console.log("init generate report by date");
+
         this.reportService
             .getReportByDate(this.date)
-            .subscribe(report => (this.reports = report));
+            .subscribe(report => (this._items = report));
 
-        this.report = new ObservableArray(this.reports);
+        this.items = new ObservableArray(this._items);
+
+        console.log(this.items[1]);
 
     }
 

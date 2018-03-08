@@ -1,7 +1,7 @@
-import { Component, OnInit, ViewChild } from "@angular/core";
-import { ActivatedRoute, Params } from "@angular/router";
 import { Report } from "../shared/report";
+import { ActivatedRoute, Params } from "@angular/router";
 import { ReportService } from "../shared/report.service";
+import { Component, OnInit, ViewChild } from "@angular/core";
 import { ObservableArray } from "tns-core-modules/data/observable-array";
 
 @Component({
@@ -12,7 +12,7 @@ import { ObservableArray } from "tns-core-modules/data/observable-array";
 })
 export class OrganizationReportComponent implements OnInit {
 
-    reports: Report[];
+    items: Report[];
     orgName: string;
 
     constructor(
@@ -26,7 +26,7 @@ export class OrganizationReportComponent implements OnInit {
 
         this.reportService
             .getReportByName(this.orgName)
-            .subscribe(reports => (this.reports = reports));
+            .subscribe(reports => (this.items = reports));
 
         
     }

@@ -1,8 +1,33 @@
 <!-- >> chart-angular-bar-series -->
+<!--
 <RadCartesianChart tkExampleTitle tkToggleNavButton>
     <CategoricalAxis tkCartesianVerticalAxis labelTextColor="#cb4b16" labelSize="10" lineThickness="3" lineColor="Red"></CategoricalAxis>
     <LinearAxis tkCartesianHorizontalAxis labelTextColor="Green"></LinearAxis>
 
-    <BarSeries tkCartesianSeries [items]="reports" categoryProperty="report.organization" valueProperty="report.size | fileSize"></BarSeries>
+    <BarSeries tkCartesianSeries [items]="items" categoryProperty="items.organization" valueProperty="items.size"></BarSeries>
 </RadCartesianChart>
+-->
 <!-- << chart-angular-bar-series -->
+
+<GridLayout tkExampleTitle tkToggleNavButton>
+    <RadListView [items]="_items">
+        <ng-template tkListItemTemplate let-item="item">
+            <StackLayout orientation="vertical" class="itemStackLayout">
+                <Label class="labelName" [text]="item.organization"></Label>
+                <Label class="labelTitle" [text]="item.size | fileSize"></Label>
+            </StackLayout>
+        </ng-template>
+    </RadListView>
+</GridLayout>
+<!--
+<GridLayout orientation="vertical" rows="*, *" tkExampleTitle tkToggleNavButton>
+
+    <RadPieChart height="300" allowAnimation="true" row="1">
+        <DonutSeries tkPieSeries selectionMode="DataPoint" outerRadiusFactor="0.9" expandRadius="0.4" outerRadiusFactor="0.7" innerRadiusFactor="0.4"
+            [items]="items" valueProperty="size" legendLabel="organization"></DonutSeries>
+
+        <RadLegendView tkPieLegend position="Right" title="Organizations" offsetOrigin="TopRight" width="110" enableSelection="true"></RadLegendView>
+    </RadPieChart>
+
+</GridLayout>
+-->

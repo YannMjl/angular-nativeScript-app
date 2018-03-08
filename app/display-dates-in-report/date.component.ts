@@ -10,7 +10,7 @@ import { ReportService } from "../shared/report.service";
 })
 export class DisplayDateComponent implements OnInit {
 
-    reports: Report[];
+    items: Report[];
 
     constructor(
         private reportService: ReportService,
@@ -21,7 +21,7 @@ export class DisplayDateComponent implements OnInit {
 
         this.reportService
             .getDateInReport()
-            .subscribe(report => (this.reports= report));
+            .subscribe(report => (this.items = report));
 
     }
 

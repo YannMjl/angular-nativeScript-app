@@ -19,11 +19,11 @@
 -->
 
 <GridLayout tkExampleTitle tkToggleNavButton>
-    <RadListView [items]="reports">
-        <ng-template tkListItemTemplate let-item="report">
+    <RadListView [items]="items">
+        <ng-template tkListItemTemplate let-item="item">
             <StackLayout orientation="vertical" class="itemStackLayout">
-                <Label class="labelName" [text]="report.size | fileSize"></Label>
-                <Label class="labelTitle" [text]="report.date | date : 'MMMM d, y'"></Label>
+                <Label class="labelName" [text]="item.size | fileSize"></Label>
+                <Label class="labelTitle" [text]="item.date | date : 'MMMM d, y'"></Label>
             </StackLayout>
         </ng-template>
     </RadListView>
