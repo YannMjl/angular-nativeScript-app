@@ -2,6 +2,7 @@ import { Component, OnInit } from "@angular/core";
 import { Report } from "../shared/report";
 import { ReportService } from "../shared/report.service";
 
+
 @Component({
     selector: "dates-in-report",
     moduleId: module.id,
@@ -11,6 +12,7 @@ import { ReportService } from "../shared/report.service";
 export class DisplayDateComponent implements OnInit {
 
     items: Report[];
+    public isBusy = true;
 
     constructor(
         private reportService: ReportService,
@@ -21,8 +23,15 @@ export class DisplayDateComponent implements OnInit {
 
         this.reportService
             .getDateInReport()
-            .subscribe(report => (this.items = report));
-
+            .subscribe(report => {
+                this.items = report;
+                this.isBusy = false;
+            },
+            err => {
+                console.log("Error occured.");
+                console.log(err);
+            }
+        );
     }
 
 }

@@ -2,6 +2,7 @@ import { Report } from "./report";
 import { Observable } from "rxjs/Observable";
 import { HttpClient } from "@angular/common/http";
 import { Injectable, Inject } from "@angular/core";
+import { BackendService } from "./backend.service";
 
 @Injectable()
 export class ReportService {
@@ -39,16 +40,15 @@ export class ReportService {
     }
 
     deleteReportByName(name: string): Observable<Report[]> {
-        const apiUrl =
-            'https://web-server-reports.herokuapp.com/delete-name/' + name;
+        const apiUrl = 'https://web-server-reports.herokuapp.com/delete-name/' + name;
 
         return this.http.get<Report[]>(apiUrl);
     }
 
     deleteReportByDate(date: Date): Observable<Report[]> {
-        const apiUrl =
-            'https://web-server-reports.herokuapp.com/delete-date/' + date;
+        const apiUrl = 'https://web-server-reports.herokuapp.com/delete-date/' + date;
 
         return this.http.get<Report[]>(apiUrl);
     }
+
 }

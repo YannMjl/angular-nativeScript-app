@@ -1,6 +1,7 @@
 import { Report } from "../shared/report";
 import { Component, OnInit } from "@angular/core";
 import { ReportService } from "../shared/report.service";
+import { LoadingIndicator } from "nativescript-loading-indicator";
 
 @Component({
     selector: "organization-list",
@@ -11,8 +12,7 @@ import { ReportService } from "../shared/report.service";
 export class DisplayOrganizationComponent implements OnInit {
 
     items: Report[];
-    isLoading = false;
-    listLoaded = false;
+    public isBusy = true;
 
     constructor(private reportService: ReportService) { }
 
@@ -23,9 +23,18 @@ export class DisplayOrganizationComponent implements OnInit {
     }
 
     getReports(): void {
-        this.isLoading = true;
+        
         this.reportService
             .getReports()
-            .subscribe(report => (this.items = report));
+            .subscribe(
+                report => {
+                this.items = report;
+                this.isBusy = false;
+                },
+                err => {
+                    console.log("Error occured.");
+                    console.log(err);
+            }
+        );
     }
 }
