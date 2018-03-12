@@ -11,6 +11,8 @@ import { ReportService } from "../shared/report.service";
 export class DisplayOrganizationComponent implements OnInit {
 
     items: Report[];
+    isLoading = false;
+    listLoaded = false;
 
     constructor(private reportService: ReportService) { }
 
@@ -21,6 +23,7 @@ export class DisplayOrganizationComponent implements OnInit {
     }
 
     getReports(): void {
+        this.isLoading = true;
         this.reportService
             .getReports()
             .subscribe(report => (this.items = report));

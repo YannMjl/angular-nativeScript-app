@@ -5,6 +5,7 @@ import { NativeScriptRouterModule } from "nativescript-angular/router";
 // import app components 
 import { LoginComponent } from "./login/login.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
+import { UploadComponent } from "./upload-report/upload.component";
 import { DisplayDateComponent } from "./display-dates-in-report/date.component";
 import { DateReportComponent } from "./display-report-by-date/date-report.component";
 import { DisplayOrganizationComponent } from "./display-organizations-in-report/organization.component";
@@ -22,6 +23,7 @@ export const routes = [
     { path: "welcome", component: WelcomeComponent },
     { path: "organization-list", component: DisplayOrganizationComponent  },
     { path: "dates-in-report", component: DisplayDateComponent },
+    { path: "upload-report", component: UploadComponent },
     { path: "org-report/:id", component: OrganizationReportComponent },
     { path: "date-report/:id", component: DateReportComponent }
 ];

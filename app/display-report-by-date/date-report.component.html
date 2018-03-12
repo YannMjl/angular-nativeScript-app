@@ -1,14 +1,13 @@
 <!-- >> chart-angular-bar-series -->
-<!--
+
 <RadCartesianChart tkExampleTitle tkToggleNavButton>
-    <CategoricalAxis tkCartesianVerticalAxis labelTextColor="#cb4b16" labelSize="10" lineThickness="3" lineColor="Red"></CategoricalAxis>
     <LinearAxis tkCartesianHorizontalAxis labelTextColor="Green"></LinearAxis>
+    <CategoricalAxis tkCartesianVerticalAxis labelTextColor="#cb4b16" labelSize="10" lineThickness="3" lineColor="Red"></CategoricalAxis>
 
-    <BarSeries tkCartesianSeries [items]="items" categoryProperty="items.organization" valueProperty="items.size"></BarSeries>
+    <BarSeries tkCartesianSeries [items]="items" categoryProperty="organization" valueProperty="size | fileSize"></BarSeries>
 </RadCartesianChart>
--->
-<!-- << chart-angular-bar-series -->
 
+<!--
 <GridLayout tkExampleTitle tkToggleNavButton>
     <RadListView [items]="_items">
         <ng-template tkListItemTemplate let-item="item">
@@ -19,7 +18,7 @@
         </ng-template>
     </RadListView>
 </GridLayout>
-<!--
+
 <GridLayout orientation="vertical" rows="*, *" tkExampleTitle tkToggleNavButton>
 
     <RadPieChart height="300" allowAnimation="true" row="1">

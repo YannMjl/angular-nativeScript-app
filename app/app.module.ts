@@ -6,6 +6,7 @@ import { NativeScriptModule } from "nativescript-angular/nativescript.module";
 // import app components
 import { AppComponent } from "./app.component";
 import { LoginComponent } from "./login/login.component";
+import { UploadComponent } from "./upload-report/upload.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
 import { DisplayDateComponent } from "./display-dates-in-report/date.component";
 import { DateReportComponent } from "./display-report-by-date/date-report.component";
@@ -50,6 +51,7 @@ import { NativeScriptUIDataFormModule } from "nativescript-pro-ui/dataform/angul
         AppComponent,
         FileSizePipe,
         LoginComponent,
+        UploadComponent,
         WelcomeComponent,
         DateReportComponent,
         DisplayDateComponent, 

@@ -27,11 +27,10 @@ export class DateReportComponent implements OnInit {
 
         this.reportService
             .getReportByDate(this.date)
-            .subscribe(report => (this._items = report));
-
-        this.items = new ObservableArray(this._items);
-
-        console.log(this.items[1]);
+            .subscribe(report => {
+                this._items = report;
+                this.items = new ObservableArray(report);
+            });
 
     }
 
