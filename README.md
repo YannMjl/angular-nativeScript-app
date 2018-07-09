@@ -1,4 +1,4 @@
-# angular-nativeScript-app
+# Angular-NativeScript-App
 This is milti-platform Mobile app for both Android and iOS build with angular CLI and nativeScript 
 
 ## Author
